@@ -33,11 +33,11 @@ Busybox-1 Default Gateway: 172.17.0.1
 
 Busybox-4 Default Gateway: 172.18.0.1
 
-![](1.png)
+![](./images/1.png)
 
-![](2.png)
+![](./images/2.png)
 
-![](3.png)
+![](./images/3.png)
 
 Der Unterschied ist, dass beim default bridge, dass sie teilweise verbunden sind, aber nur durch das Ip ist, das sich in der Zeit verändern kann. Wenn ich aber mein eigenes Netzwerk erstelle. kann ich auch dass container namen benutzen, dass sich nicht in der Zeit verändert.
 
