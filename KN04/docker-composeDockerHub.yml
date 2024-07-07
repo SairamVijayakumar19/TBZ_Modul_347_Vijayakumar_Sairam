@@ -1,0 +1,27 @@
+version: '3.8'
+name: kn04-compose-public
+services:
+  database:
+    image: sairamtbz/m347:kn02b-db
+    container_name: m347-kn04a-db
+    ports:
+      - "3306:3306"
+    networks:
+      - kn04-network
+  web:
+    image: sairamtbz/m347:kn02b-web
+    container_name: m347-kn04a-web
+    ports:
+      - "5600:80"
+    depends_on:
+      - database
+    networks:
+      - kn04-network
+networks:
+  kn04-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.100.0.0/16
+          ip_range: 172.100.5.0/24
+          gateway: 172.100.5.254
